@@ -72,7 +72,7 @@ WantedBy=multi-user.target
                 systemctl start %s 
             '''
 
-            os.system(sshell % (model_path, model, model, model, model, model))
+            os.system(sshell % (model_path, model, model, model, model))
 
 
 
