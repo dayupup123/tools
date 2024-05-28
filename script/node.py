@@ -54,7 +54,7 @@ WantedBy=multi-user.target
 
 
     # 添加依赖
-    config  = os.path.join(os.path.join(node_path, 'config'), 'config.yml')
+    config  = os.path.join(node_path, 'config.yml')
     with open(config, 'r', encoding = "utf-8") as file:
         str  = file.read()
         info = get_info(model)
