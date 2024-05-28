@@ -16,7 +16,7 @@ PATH = "/opt"
 # email
 # cfApiKey
 def node(model, NodeID, domain, NodeType = 'Trojan', certMode = 'dns'):
-    node_path = os.path.join(PATH, 'tools')
+    node_path = os.path.join(os.path.join(PATH, 'tools'), 'config')
     # 复制文件
     print(node_path)
     print(os.path.join(PATH, model))
@@ -40,7 +40,7 @@ LimitRSS=infinity
 LimitCORE=infinity
 LimitNOFILE=999999
 WorkingDirectory=/opt/%s
-ExecStart=/opt/zz --config /opt/%s/config/config.yml
+ExecStart=/opt/zz --config /opt/%s/config.yml
 Restart=on-failure
 RestartSec=10
 
@@ -66,8 +66,6 @@ WantedBy=multi-user.target
             mf.write(new_str)
             sshell = '''
                 cd %s &&
-                chmod +x ./XrayR &&
-                mv ./XrayR ./%s &&
                 cp ./%s.service /etc/systemd/system/%s.service &&
                 systemctl daemon-reload &&
                 systemctl enable %s &&
