@@ -19,4 +19,4 @@ else
 fi
 
 
-python3 /opt/tools/node.py $1 $2 $3 $4 $5
+python3 /opt/tools/script/node.py $1 $2 $3 $4 $5
