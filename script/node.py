@@ -59,9 +59,9 @@ WantedBy=multi-user.target
         str  = file.read()
         info = get_info(model)
         print(info)
-        configPath = os.path.join(model_path, 'config')
+        configPath = model_path
         new_str = str.format(ApiHost = info['ApiHost'],ApiKey = info['ApiKey'],NodeID = NodeID,NodeType = NodeType,domain = domain,email = info['email'],cfApiKey = info['cfApiKey'], certMode = certMode, configPath = configPath)
-        model_config  = os.path.join(os.path.join(model_path, 'config'), 'config.yml')
+        model_config  = os.path.join(model_path, 'config.yml')
         with open(model_config, 'w') as mf:
             mf.write(new_str)
             sshell = '''
