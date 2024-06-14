@@ -6,11 +6,11 @@ import sys
 
 PATH = "/opt"
 
-O_CONFIG = "config/custom_outbound.json"
+O_CONFIG = "custom_outbound.json"
 
-R_CONFIG = "config/route.json"
+R_CONFIG = "route.json"
 
-D_CONFIG = "config/dns.json"
+D_CONFIG = "dns.json"
 
 
 DEFAULT_DNS = '''
